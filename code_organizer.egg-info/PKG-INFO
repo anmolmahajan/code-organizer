@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: code-organizer
+Version: 1.0
+Summary: This module sorts the source codes in the current directory based on their language.
+Home-page: https://github.com/anmolmahajan/code-organizer.git
+Author: Anmol Mahajan
+Author-email: mahajan.anmol@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN

@@ -1,0 +1,70 @@
+#!/usr/bin/env python 
+#!/usr/bin/env python
+import os
+import sys
+directory = os.getcwd()
+
+linux = sys.platform.startswith('linux')
+mac = sys.platform.startswith('darwin')
+print("\n")
+if linux:
+    print("Linux Platform. Please be careful and don't run this outside /home/")
+elif mac:
+    print("Mac OS X. Please be careful and don't run this outside /home/")
+else:
+    print("Windows or Others. Please make sure you don't have non-code files here.")
+
+print("Use only in directories with source codes and not actual programs.")
+print("Proceed at your own discretion? (Y/n)")
+
+choice = raw_input()
+if choice == 'y' or choice == 'Y':
+    paths = {}
+    paths['py'] = directory+'/Python'
+    paths['cpp'] = directory+'/Clang'
+    paths['c'] = directory+'/Clang'
+    paths['java'] = directory+'/Java'
+    paths['web'] = directory+'/Web'
+    paths['html'] = paths['web']+'/HTML'
+    paths['php'] = paths['web']+'/PHP'
+    paths['js'] = paths['web']+'/JavaScript'
+    paths['css'] = paths['web']+'/CSS'
+    paths['execs'] = directory+'/Others'
+
+
+    for i,key in paths.items():
+        if not os.path.exists(key):
+    	       os.makedirs(key)
+
+
+
+    j = 1
+    print("Processing...")
+    for file in os.listdir(directory):
+        path = os.path.join(directory, file)
+        if os.path.isdir(path):
+            continue
+        flag = False
+        for i,key in paths.items():
+            if(file.endswith(i)):
+                print(j),
+                print("    "),
+                print(file),
+                print(" belongs to directory "),
+                print(key)
+                os.rename(directory+'/'+file, key+'/'+file)
+                flag = True
+                break
+
+        if not flag:
+            print(j),
+            print("    "),
+            print(file),
+            print(" belongs to directory "),
+            print(paths['execs'])
+            os.rename(directory+'/'+file, paths['execs']+'/'+file)
+        j = j + 1
+
+    print("Done!")
+else:
+    print("Thank you for being careful!")

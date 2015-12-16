@@ -1,0 +1,8 @@
+setup.py
+bin/code-organizer
+code-organizer/__init__.py
+code_organizer.egg-info/PKG-INFO
+code_organizer.egg-info/SOURCES.txt
+code_organizer.egg-info/dependency_links.txt
+code_organizer.egg-info/not-zip-safe
+code_organizer.egg-info/top_level.txt
