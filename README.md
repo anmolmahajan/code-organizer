@@ -21,5 +21,7 @@ Run the following command:
     
 # Notice
 To avoid uber-destruction:
+
 1. Do not run as root.
-2. Do not run outside your code directory.
+
+2. Do not run outside of your code directory.
