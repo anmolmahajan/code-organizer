@@ -14,7 +14,7 @@ Open terminal and run:
 
 
 #Usage
-Open terminal and navigate to a desired directory. 
+Open terminal and navigate to the desired directory. 
 Run the following command:
 
     code-organizer
